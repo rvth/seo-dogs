@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Dogs</title>
+
+</head>
+
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+
+
+<h1>Choose a topic..</h1>
+
+<div class="cards">
+    <div class="card">
+      <header>
+        <h2>Crawling & Indexing</h2>
+      </header>
+  
+  <img alt="crawling and indexing" height="250px" src="{{url_for('static', filename='group.webp')}}" width="400px">
+        <br>
+        <br>
+        <div class="button">
+          <a href="#"> &#128062; Explore</a>
+        </div>
+      </div> 
+  
+      <div class="card">
+        <header>
+          <h2>Site Structure</h2>
+        </header>
+    
+        <img src="{{url_for('static', filename='structure.webp')}}" width="400px" height="250px" alt="site structure">
+        <br>
+        <br>
+        <div class="button">
+          <a href="#">&#128062; Explore</a>      
+        </div>
+      </div>
+  
+     <div class="card">
+        <header>
+          <h2>On-Page</h2>
+        </header>
+    
+        <img src="{{url_for('static', filename='site.webp')}}" width="400px" height="250px" alt="on page">
+        <br>
+        <br>
+        <div class="button">
+          <a href="#">&#128062; Explore</a>
+        </div>
+      </div>
+  
+     <div class="card">
+        <header>
+          <h2>User Experience</h2>
+        </header>
+    
+        <img src="{{url_for('static', filename='user_experience.webp')}}" width="400px" height="250px" alt="user experience">
+        <br>
+        <br>
+        <div class="button">
+          <a href="#">&#128062; Explore</a>
+        </div>
+      </div>
+  
+      <div class="card">
+        <header>
+          <h2>Links</h2>
+        </header>
+    
+        <img src="{{url_for('static', filename='love.webp')}}" width="400px" height="250px" alt="links">
+        <br>
+        <br>
+        <div class="button">
+          <a href="#">&#128062; Explore</a>
+        </div>
+      </div>
+  
+       <div class="card">
+        <header>
+          <h2>International SEO</h2>
+        </header>
+    
+        <img src="{{url_for('static', filename='international.webp')}}" width="400px" height="250px" alt="international seo">
+        <br>
+        <br>
+        <div class="button">
+          <a href="#">&#128062; Explore</a>
+        </div>
+      </div>
+  </div>
+  
+<br>
+<br>
+<br>
+
+
+
+
+<footer class="page_footer">
+<p>&#128062; Made with &#128420; by Ruth</p>
+<p>&#169; 2020</p>
+</footer>
+    {% endblock %}
+
+</body>
+</html>
