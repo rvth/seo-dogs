@@ -119,6 +119,8 @@ ul {
   }
 
   .card {
+    display: flex;
+    align-items: center;
     background-color: #fff;
     box-shadow: 10px 10px #b5c0f6;
     border-radius: 10px;
@@ -199,7 +201,7 @@ a:link {
     display: inline-block;
     font-size: 14px;
     border-radius: 7px;
-    margin-left: 20px;
+    margin-left: 150px;
     margin-bottom: 20px;
   }
 
