@@ -44,11 +44,11 @@ body {
 /* images */
 
 img {
-    padding: 20px 20px 20px 20px /* top right bottom left */
+    padding: 20px 20px 20px 75px /* top right bottom left */
 }
 
 .imagesize {
-    width: 300px;
+    width 350px;
 }
 
 /* layout */
@@ -119,7 +119,7 @@ ul {
 
   .card {
     background-color: #fff;
-    box-shadow: 10px 10px #b5c0f6;
+    box-shadow: 7px 7px #b5c0f6;
     border-radius: 10px;
   }
 
@@ -132,7 +132,7 @@ ul {
     display: inline-block;
     font-size: 14px;
     border-radius: 7px;
-    margin-left: 150px;
+    margin-left: 175px;
     margin-bottom: 20px;
   }
 
@@ -185,7 +185,7 @@ a:link {
 
   .card_2 {
     background-color: #fff;
-    box-shadow: 10px 10px #b5c0f6;
+    box-shadow: 7px 7px #b5c0f6;
     border-radius: 10px;
   }
 
@@ -198,7 +198,7 @@ a:link {
     display: inline-block;
     font-size: 14px;
     border-radius: 7px;
-    margin-left: 20px;
+    margin-left: 175px;
     margin-bottom: 20px;
   }
 
