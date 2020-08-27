@@ -119,8 +119,6 @@ ul {
   }
 
   .card {
-    display: flex;
-    align-items: center;
     background-color: #fff;
     box-shadow: 10px 10px #b5c0f6;
     border-radius: 10px;
@@ -174,10 +172,12 @@ a:link {
   }
 
   .cards_2 {
+    display: -ms-grid;
     display: grid;
-    align-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
-    grid-gap: 30px;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+    justify-items: center;
     margin-bottom: 20px;
     border-radius: 10px;
   }
@@ -201,7 +201,7 @@ a:link {
     display: inline-block;
     font-size: 14px;
     border-radius: 7px;
-    margin-left: 150px;
+    margin-left: 20px;
     margin-bottom: 20px;
   }
 
@@ -228,4 +228,3 @@ a:link {
         width:96%;
     }
 }
-
