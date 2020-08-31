@@ -21,7 +21,7 @@
       </header>
       <p>Search engine bots will crawl a website in order to discover pages and understand the content.</p>
         <div class="button_2">
-          <a href="#"> &#128062; Explore</a>
+          <a href="{{ url_for('crawl') }}"> &#128062; Explore</a>
         </div>
       </div>
 
@@ -31,7 +31,7 @@
           <p>Rendering is the process of code being run in order for webpages to be assessed.</p>
         </header>
         <div class="button_2">
-          <a href="#">&#128062; Explore</a>
+          <a href="{{ url_for('rendering') }}">&#128062; Explore</a>
         </div>
       </div>
 
@@ -41,7 +41,7 @@
         </header>
         <p>If a page meets certain dependincies it can be organised and added to the search engine index.</p>
         <div class="button_2">
-          <a href="#">&#128062; Explore</a>
+          <a href="{{ url_for('indexing') }}">&#128062; Explore</a>
         </div>
       </div>
 
@@ -51,37 +51,17 @@
         </header>
         <p>Robots.txt is be used to inform search engines of pages you would not like them to crawl.</p>
         <div class="button_2">
-          <a href="#">&#128062; Explore</a>
+          <a href="{{ url_for('robots') }}">&#128062; Explore</a>
         </div>
       </div>
 
         <div class="card_2">
         <header>
-          <h2>Noindex</h2>
+          <h2>Noindex & Nofollow</h2>
         </header>
-        <p>This small tag can be added to the HTML of a page to inform search engines not to include the page in the index.</p>
+        <p>These small tags can be added to the HTML of a page to inform search engines not to include the page in the index and not to follow a link.</p>
         <div class="button_2">
-          <a href="#">&#128062; Explore</a>
-        </div>
-      </div>
-
-        <div class="card_2">
-        <header>
-          <h2>Nofollow</h2>
-        </header>
-        <p>The nofollow tag is used to tell search engine crawlers not to follow a link, or pass equity between pages.</p>
-        <div class="button_2">
-          <a href="#">&#128062; Explore</a>
-        </div>
-      </div>
-
-        <div class="card_2">
-        <header>
-          <h2>X-robots</h2>
-        </header>
-        <p>Similar to a noindex tag, X-robots is used to control the indexing of a page and is placed in the HTTP response header.</p>
-        <div class="button_2">
-          <a href="#">&#128062; Explore</a>
+          <a href="{{ url_for('noindex') }}">&#128062; Explore</a>
         </div>
       </div>
 
@@ -91,7 +71,7 @@
         </header>
         <p>Used for managing duplicate content, canonical tags are a signal to inform search engines of your preferred page for indexing.</p>
         <div class="button_2">
-          <a href="#">&#128062; Explore</a>
+          <a href="{{ url_for('canonicals') }}">&#128062; Explore</a>
         </div>
       </div>
 </div>

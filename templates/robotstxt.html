@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Robots.txt</title>
+</head>
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+
+<h1>Robots.txt</h1>
+    <img alt="crawling dog" src="{{url_for('static', filename='crawling.webp')}}" class="responsive">
+    <p>Here is Dixie, showing you how crawling is done <a href="https://twitter.com/SalSurra/status/1298216427204247558">courtesy of Sal Surra</a> <a href="https://twitter.com/SalSurra/">(@SalSurra)</a>.</p>
+
+<h2>What is search engine crawling?</h2>
+
+<p>Crawling is the process undertaken by search engine bots to discover and analyse a webpage.</p>
+
+<p>Search engines send out bots to find content on the web and crawl the content in order to understand what the page is about. Within this process the crawlers will also discover links to other pages on the site and follow the path to find and crawl more content.</p>
+
+<p>There are a number of algorithms used by search engines to determine the frequency of crawling for different websites and the content they contain.</p>
+
+<p>In addition to crawling html pages, search engines can also crawl non-text files including images, audio and PDF files, if they discover them within links, however they will not be able to read the content on the file, just the file name and meta data.</p>
+
+<p>You can control which pages on the site search engines crawl by using directives in your robots.txt file. Read more on robots.txt here.</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<footer class="page_footer">
+<p>&#128062; Made with &#128420; by Ruth</p>
+<p>&#169; 2020</p>
+</footer>
+    {% endblock %}
+
+</body>
+</html>
+
+</body>
+</html>

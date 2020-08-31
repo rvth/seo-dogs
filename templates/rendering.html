@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rendering</title>
+</head>
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+
+<h1>Rendering</h1>
+    <img alt="crawling dog" src="{{url_for('static', filename='crawling.webp')}}" class="responsive">
+    <p>Here is Dixie, showing you how crawling is done <a href="https://twitter.com/SalSurra/status/1298216427204247558">courtesy of Sal Surra</a> <a href="https://twitter.com/SalSurra/">(@SalSurra)</a>.</p>
+
+<h2>What is search engine rendering?</h2>
+
+<p>Once a search engine bot has crawled a page they will render it in order to run the code contained within the html in order to assess and understand the content. </p>
+
+<p>When rendering a page, search engine crawlers will collect information on the quality of the site and use it in order to determine the rank of the page in search engine results.</p>
+
+<p>All HTML pages have an initial state, which is the when is the first response. This is followed by the rendered HTML, also known as the DOM (Document Object Model). This represents the initial state once any JavaScript has been added to it. You can view a page's DOM in your browser developer tools.</p>
+
+<p>Search engines such as Google are only able to index what they can render from a page, so if it can't be rendered then it can't be used to understand the content. Typically this issue occurs if JavaScript is used to add important information to a page. Therefore you need to be aware of how content is being served on your site and ensure nothing is blocked from rendering.</p>
+
+<p>Remember if content is imperative for users this should take precedent over any fancy, JavaScript led, features.</p>
+
+    <p><a href="https://www.searchenginejournal.com/rendering-seo-introduction/330399/">This article from Jamie Alberico explains rendering further</a>, as well as recommendations for 'making rendering more effective and less painful'</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<footer class="page_footer">
+<p>&#128062; Made with &#128420; by Ruth</p>
+<p>&#169; 2020</p>
+</footer>
+    {% endblock %}
+
+</body>
+</html>
+
+</body>
+</html>

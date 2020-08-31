@@ -14,7 +14,7 @@ h1{
 
 h2{
     color: black;
-    font-size: 1.0625rem;    ;
+    font-size: 1.4375rem;
     font-weight: bold;
     font-family: 'Space Mono', monospace;
 }
@@ -33,7 +33,7 @@ p{
 body {
     color: black;
     font-family: 'Open Sans', sans-serif;
-    font-size: 0.875rem;
+    font-size: 1.0625rem;
     background: #FAFAFA;
 }
 
@@ -44,11 +44,17 @@ body {
 /* images */
 
 img {
-    padding: 20px 20px 20px 75px /* top right bottom left */
+    padding: 20px 20px 20px 50px /* top right bottom left */
 }
 
 .imagesize {
     width 350px;
+}
+
+.responsive {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
 }
 
 /* layout */
@@ -132,7 +138,7 @@ ul {
     display: inline-block;
     font-size: 14px;
     border-radius: 7px;
-    margin-left: 175px;
+    margin-left: 150px;
     margin-bottom: 20px;
   }
 
@@ -141,20 +147,21 @@ ul {
     color: black;
   }
 
-/* unvisited link */
-a:link {
+    /* unvisited link */
+   a:link {
     color: black;
     text-decoration: none;
   }
 
   /* visited link */
   a:visited {
-    color: black;
+   color: black;
   }
 
   /* mouse over link */
   a:hover {
-    color: #474747;
+    color: #575555;
+    text-decoration: underline;
   }
 
   /* selected link */

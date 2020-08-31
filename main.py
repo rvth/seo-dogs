@@ -34,6 +34,30 @@ def links():
 def international():
     return render_template("international-seo.html")
 
+@app.route("/crawling")
+def crawl():
+    return render_template("crawling.html")
+
+@app.route("/rendering")
+def rendering():
+    return render_template("rendering.html")
+
+@app.route("/indexing")
+def indexing():
+    return render_template("indexing.html")
+
+@app.route("/robotstxt")
+def robots():
+    return render_template("robotstxt.html")
+
+@app.route("/noindex-and-nofollow")
+def noindex():
+    return render_template("noindex-and-nofollow.html")
+
+@app.route("/canonicals")
+def canonicals():
+    return render_template("canonicals.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
