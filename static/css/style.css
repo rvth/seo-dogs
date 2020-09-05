@@ -44,15 +44,15 @@ body {
 /* images */
 
 img {
-    padding: 20px 20px 20px 50px /* top right bottom left */
-}
-
-.imagesize {
-    width 350px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50%;
+  width: 50%;
 }
 
 .responsive {
-  width: 100%;
+  width: auto;
   max-width: 1000px;
   height: auto;
 }
@@ -109,6 +109,13 @@ ul {
     font-size: 1.3rem;
    }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
   /* Topics Section */
   .cards {
     display: grid;
@@ -133,13 +140,16 @@ ul {
     background-color: #b3b3b3;
     color: black;
     font-family: 'Space Mono', monospace;
-    padding: 15px 15px;
+    padding: 10px 10px;
     text-align: center;
     display: inline-block;
     font-size: 14px;
     border-radius: 7px;
-    margin-left: 150px;
+    margin: -5px -50px;
     margin-bottom: 20px;
+    position:relative;
+    top:20%;
+    left:50%;
   }
 
   .button:hover {
@@ -173,8 +183,8 @@ ul {
     text-align: center;
     padding: 1em 0;
     font-size: .9rem;
-    background-color: #97f3f6;
-    border: 1px solid #97f3f6;
+    background-color: #b3b3b3;
+    border: 1px solid #b3b3b3;
   }
 
   .cards_2 {
@@ -200,13 +210,16 @@ ul {
     background-color: #b3b3b3;
     color: black;
     font-family: 'Space Mono', monospace;
-    padding: 15px 15px;
+    padding: 10px 10px;
     text-align: center;
     display: inline-block;
     font-size: 14px;
     border-radius: 7px;
-    margin-left: 175px;
+    margin: -5px -50px;
     margin-bottom: 20px;
+    position:relative;
+    top:20%;
+    left:50%;
   }
 
   header{

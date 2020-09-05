@@ -9,21 +9,23 @@
     {% block content %}
 
 <h1>Indexing</h1>
-    <p>Here is Dixie, showing you how crawling is done <a href="https://twitter.com/SalSurra/status/1298216427204247558">courtesy of Sal Surra</a> <a href="https://twitter.com/SalSurra/">(@SalSurra)</a>.</p>
     <img alt="crawling dog" src="{{url_for('static', filename='crawling.webp')}}" class="responsive">
+    <p>An index is database of <s>all the dogs in the world</s> all the pages on the web.</p>
 
-<h2>What is search engine crawling?</h2>
+<h2>What is search engine indexing and how does it work?</h2>
 
-<p>Crawling is the process undertaken by search engine bots to discover and analyse a webpage.</p>
+<p>Indexing is the process of gathering all of the content found during the crawling process. Once a page has been found and rendered, the search engine crawlers will analyse the content and then store and organise everything found within its index.</p>
 
-<p>Search engines send out bots to find content on the web and crawl the content in order to understand what the page is about. Within this process the crawlers will also discover links to other pages on the site and follow the path to find and crawl more content.</p>
+<p>Having all content stored within an index makes it super fast for search engines to retrieve information once a user searches for a particular query. Searching through every individual page on the web once a query has been made would be an incredibly slow process, so the index helps them to organise and deliver content relevant to a user's query.</p>
 
-<p>There are a number of algorithms used by search engines to determine the frequency of crawling for different websites and the content they contain.</p>
+<p>You can control which pages are added to the index by using some meta directives such as noindex and canonical tags. You can find out more about noindex tags here and canonical tags here.</p>
 
-<p>In addition to crawling html pages, search engines can also crawl non-text files including images, audio and PDF files, if they discover them within links, however they will not be able to read the content on the file, just the file name and meta data.</p>
+<h3>Further Resources</h3>
 
-<p>You can control which pages on the site search engines crawl by using directives in your robots.txt file. Read more on robots.txt here.</p>
-<br>
+    <p><a href="https://moz.com/beginners-guide-to-seo/how-search-engines-operate">How Search Engines Operate</a></p>
+    <p><a href="https://www.searchenginejournal.com/rendering-seo-introduction/330399/">Search Engine Indexing</a></p>
+
+    <br>
 <br>
 <br>
 <br>
