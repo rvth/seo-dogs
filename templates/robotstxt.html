@@ -10,19 +10,90 @@
 
 <h1>Robots.txt</h1>
     <img alt="crawling dog" src="{{url_for('static', filename='crawling.webp')}}" class="responsive">
-    <p>Here is Dixie, showing you how crawling is done <a href="https://twitter.com/SalSurra/status/1298216427204247558">courtesy of Sal Surra</a> <a href="https://twitter.com/SalSurra/">(@SalSurra)</a>.</p>
+<p>Much like german shepherds, robots.txt files are very powerful and respected but also easy to train and incredibly loyal.</p>
 
-<h2>What is search engine crawling?</h2>
+<h2>What is a robots.txt file?</h2>
 
-<p>Crawling is the process undertaken by search engine bots to discover and analyse a webpage.</p>
+<p>The robots.txt file is used to tell search engine crawlers which URLs they should not visit or crawl on a site. This can be used to prevent bots from crawling low quality pages, or pages which are necessary for users once they are on the site, but unnecessary for crawlers to see.</p>
 
-<p>Search engines send out bots to find content on the web and crawl the content in order to understand what the page is about. Within this process the crawlers will also discover links to other pages on the site and follow the path to find and crawl more content.</p>
+<p>A websites robots.txt file is found on the root domain, for example https://www.seo-dogs.co/robots.txt. This means the file will be specific to the full domain but will not impact the crawling of any other versions of the site, for example http://www.seo-dogs.co/robots.txt. This will need its own robots.txt file.</p>
 
-<p>There are a number of algorithms used by search engines to determine the frequency of crawling for different websites and the content they contain.</p>
+<p>Google recommends using robots.txt to combat crawl efficiency or server issues, such as Googlebot spending a lot of time crawling an unnecessary part of the site.</p>
 
-<p>In addition to crawling html pages, search engines can also crawl non-text files including images, audio and PDF files, if they discover them within links, however they will not be able to read the content on the file, just the file name and meta data.</p>
+<h2>The syntax of a robots.txt file</h2>
 
-<p>You can control which pages on the site search engines crawl by using directives in your robots.txt file. Read more on robots.txt here.</p>
+<p>Here are some of the key things you need to include in your robots.txt file.</p>
+
+    <h3>Specify user agent</h3>
+
+<p>You start a robots.txt file by specifying the user agent you want the rules to be applied to. For example, you may only want to block some pages for Googlebot and others only for Baidu. Every crawler has a user agent, for example:
+<br>
+    <br>
+        - User-agent: * – The rules apply to every bot, unless there is a more specific set of rules
+    <br>
+        - User-agent: Googlebot – All Google crawlers
+    <br>
+        - User-agent: Bingbot – Bing’s crawler
+    <br>
+        - User-agent: Yandex – Yandex’s crawler
+    <br>
+        - User-agent: Baiduspider – Baidu’s crawler
+    <br>
+        - User-agent: Twitterbot – Twitter’s crawler
+
+</p>
+
+<h3>Pattern match URLs</h3>
+
+<p>You can use regex to pattern match URLs in order to be more efficient and reduce the need to write them all out. In order to refine URL paths you can use the * and $ symbols. Here is how they work:
+    <br>
+    - * – This is a wildcard and represents any amount of any character. It can be used at the start or in the middle of a URL path, but isn’t needed at the end.
+        <br>
+            <i>Examples:</i>
+            <br>
+            */en/gb/*/reviews
+        <br>
+            */products?*colour=
+        <br>
+        <br>
+        - $ – This character signifies the end of a URL string
+        <br>
+            <i>Example:</i>
+        <br>
+        /london$ - this would block all URLs which end in /london but not any parameters which follow it.
+</p>
+
+    <h3>Directive Rules</h3>
+
+<p>Rules are case sensitive, so blocking a lower case URL string may mean the upper case URL will still get crawled.</p>
+
+<p>Directive rules only match against URL paths so must not include the protocol or domain. This is because a slash at the start of directives match against the beginning of the URL path. For example Disallow: /cats would match to www.seo-dogs.co/cats.</p>
+
+<p>You must start a directive match with either a / or * otherwise it will not match anything. E.g. “Disallow: dogs” would not match anything on the site.</p>
+
+<h3>Prioritisation and allow directives</h3>
+
+<p>If there is a particular URL type from those you have disallowed you would like to search engines to crawl, you are able to add an allow directive. However, it's important to remember that if a URL matches both an allow rule and a disallow rule, the longest matching rule is the one applied.</p>
+
+<p>For example, if your robots.txt file looked like this:
+    <br>
+    <br>
+    <code> Disallow: */dog-breeds/*
+    <br>
+           Allow: /husky
+</code>
+<br>
+</p>
+
+<p>Then the disallow rule will be applied and the /husky page will not be crawled. However, we can utilise the * character to make it longer;
+<br>
+<br>
+    <code>Disallow: */dog-breeds/*
+    <br>
+          Allow: /*********husky
+    </code>
+
+<p>In addition, if the rules are the same length, the disallow rule will be followed.</p>
 <br>
 <br>
 <br>

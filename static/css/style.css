@@ -19,6 +19,13 @@ h2{
     font-family: 'Space Mono', monospace;
 }
 
+h3{
+    color: black;
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-family: 'Space Mono', monospace;
+}
+
 h1, h2, h3, h4, h5, h6{
     margin-top:20px;
     margin-bottom:10px;
@@ -37,6 +44,14 @@ body {
     background: #FAFAFA;
 }
 
+code {
+  font-family: Consolas,"courier new";
+  color: black;
+  background-color: #f1f1f1;
+  padding: 2px;
+  font-size: 105%;
+}
+
 * {
     box-sizing: border-box;
   }
@@ -52,7 +67,7 @@ img {
 }
 
 .responsive {
-  width: auto;
+  width: 100%;
   max-width: 1000px;
   height: auto;
 }
@@ -71,11 +86,11 @@ ul {
     font-size: 1.25rem;
   }
 
-  li {
+.container container-nav ul, li{
     float: right;
   }
 
-  li a {
+.container container-nav ul, li a {
     display: block;
     color: black;
     text-align: center;
@@ -83,7 +98,7 @@ ul {
     text-decoration: none;
   }
 
-  li a:hover {
+.container container-nav ul, li a:hover {
     background-color: #ddd;
   }
 

@@ -10,19 +10,37 @@
 
 <h1>Canonical Tags</h1>
     <img alt="crawling dog" src="{{url_for('static', filename='crawling.webp')}}" class="responsive">
-    <p>Here is Dixie, showing you how crawling is done <a href="https://twitter.com/SalSurra/status/1298216427204247558">courtesy of Sal Surra</a> <a href="https://twitter.com/SalSurra/">(@SalSurra)</a>.</p>
+<p>There are many labradors in the world, and each one is unique and special and beautiful, therefore each labrador would need a self-referencing canonical tag to highlight their uniqueness. However, some pages on websites may not all be unique, and canonical tags can be used here to prevent duplication.</p>
 
-<h2>What is search engine crawling?</h2>
+<h2>What is a canonical tag?</h2>
 
-<p>Crawling is the process undertaken by search engine bots to discover and analyse a webpage.</p>
+<p>A canonical tag is a snippet of code that gets added to a page's HTML and is a way of informing search engines of the main version of a page. This is particularly useful if you have duplicate or similar pages across the site. Canonical tags can also be used to inform search engines which URL you want to appear in search results.</p>
 
-<p>Search engines send out bots to find content on the web and crawl the content in order to understand what the page is about. Within this process the crawlers will also discover links to other pages on the site and follow the path to find and crawl more content.</p>
+<h2>Why are canonical tags used?</h2>
 
-<p>There are a number of algorithms used by search engines to determine the frequency of crawling for different websites and the content they contain.</p>
+<p>Canonical tags are used to prevent duplicate content issues from arising on your site and within search results. Duplicate content can also affect your crawl budget, where search engine crawlers waste time crawling multiple different versions of the same page, rather than discovering other key pages on the site.</p>
 
-<p>In addition to crawling html pages, search engines can also crawl non-text files including images, audio and PDF files, if they discover them within links, however they will not be able to read the content on the file, just the file name and meta data.</p>
+<p>It’s important to remember that there can be several ways to access a page, with www. or non www., ending with a trailing slash or no trailing slash or UTM tracking codes for ads, email or social promotion and sometimes dynamically created URLs from CMS platforms that you might not even know exist. These are all seen as unique pages by search engines, so canonical tags can help to solve duplicate content issues which may arise from these.</p>
 
-<p>You can control which pages on the site search engines crawl by using directives in your robots.txt file. Read more on robots.txt here.</p>
+<h2>Self referencing canonical tags</h2>
+
+<p>It is also recommended to use self-referential canonical tags for pages which you know are unique content and do not have a duplicate to canonicalise to. A self referencing canonical tag is essentially where it points to the same URL. For example, the canonical for this URL would be:
+<br>
+    <code>link rel="canonical" href="https://www.seo-dogs.co/canonical-tags/"</code>
+</p>
+<h2>Canonical tag implementation</h2>
+
+<p>Canonical tags are also known as "rel canonical" due to their implementation, using a rel link. For example, if I wanted to canonicalise Page A (https://www.example.com/all-dog-breeds/) to Page B (https://www.example.com/dog-breeds/) the canonical tag I use on Page A will look like this:
+<br>
+    <code> link rel="canonical" href="https://www.example.com/dog-breeds/" </code>
+</p>
+<p>It is also important to avoid sending mixed signals through canonical tags, as this can confuse search engines and cause them to ignore the canonicals you set. For example, you wouldn't want to canonicalise Page A to Page B, only to canonicalise Page B back to Page A. Similarly you don't want to canonicalise Page A to Page B and then redirect Page B to Page A.</p>
+
+<h3>Further Resources</h3>
+
+    <p><a href="https://moz.com/learn/seo/canonicalization">Learn Canonicalization</a></p>
+    <p><a href="https://ahrefs.com/blog/canonical-tags/">What are Canonical Tags?</a></p>
+
 <br>
 <br>
 <br>

@@ -10,20 +10,71 @@
 
 <h1>Noindex and Nofollow Tags</h1>
     <img alt="crawling dog" src="{{url_for('static', filename='crawling.webp')}}" class="responsive">
-    <p>Here is Dixie, showing you how crawling is done <a href="https://twitter.com/SalSurra/status/1298216427204247558">courtesy of Sal Surra</a> <a href="https://twitter.com/SalSurra/">(@SalSurra)</a>.</p>
+<p>noindex and nofollow tags are small, but powerful additions to a page, much like a jack russel. They may be small in stature, but they make sure you know they are there.</p>
 
-<h2>What is search engine crawling?</h2>
+<h2>What is a noindex tag?</h2>
 
-<p>Crawling is the process undertaken by search engine bots to discover and analyse a webpage.</p>
+<p>A noindex indicates to search engines that can still crawl a page, but they shouldn't include it in their index. It effectively stops a page from appearing in the search engine results pages (SERPs). It is useful for keeping irrelevant, unnecessary pages from being indexed.</p>
 
-<p>Search engines send out bots to find content on the web and crawl the content in order to understand what the page is about. Within this process the crawlers will also discover links to other pages on the site and follow the path to find and crawl more content.</p>
+<p>Google will still crawl noindex pages, but less frequently than indexable pages, so it can help improve the use of your crawl budget.</p>
 
-<p>There are a number of algorithms used by search engines to determine the frequency of crawling for different websites and the content they contain.</p>
+<h2>What is a nofollow tag?</h2>
 
-<p>In addition to crawling html pages, search engines can also crawl non-text files including images, audio and PDF files, if they discover them within links, however they will not be able to read the content on the file, just the file name and meta data.</p>
+<p>nofollow tags tell a crawler not to follow any links on a page or on a specific link (depending on the implementation), meaning that no link equity will be passed on to the target URL. To restrict crawling and improve crawler efficiency, you can use nofollow to prevent URLs that you don’t want equity to be passed to from being crawled.</p>
 
-<p>You can control which pages on the site search engines crawl by using directives in your robots.txt file. Read more on robots.txt here.</p>
+<p>Nofollow tags are usually used in conjunction with noindex tags, and the pair complement each other for restricting crawling and indexing of a page.</p>
+
+<h2>How are noindex & nofollow tags applied?</h2>
+
+<p>There are two ways you can add these tags to a webpage. The first is including them within the HTML of the page, known as the meta robots tag. This will look something like this:
 <br>
+    <code>meta name="robots" content="noindex"
+            <br>
+          meta name="robots" content="noindex, nofollow"</code>
+</p>
+<p>There is also the X-Robots-Tags which are placed in the HTTP response header. These look similar to this:
+<br>
+    <code>
+        HTTP/1.1 200 OK
+        <br>
+        Date: Sun, 27 September 2020 21:42:43 GMT
+        <br>
+        *(…)*
+        <br>
+        **X-Robots-Tag: noindex**
+        <br>
+        *(…)*
+
+    </code>
+
+    <br>
+    <br>
+
+    <code>
+        HTTP/1.1 200 OK
+        <br>
+        Date: Sun, 27 September 2020 21:42:43 GMT
+        <br>
+        *(…)*
+        <br>
+        **X-Robots-Tag: noindex**
+        <br>
+        **X-Robots-Tag: nofollow**
+        <br>
+        *(…)*
+    </code>
+</p>
+<p>The X-Robots tags are particularly useful for controlling the indexing of non-html content, such as PDF files, video or word documents where it isn’t possible to add robots directives in the HTML head. For example, if you were wanting to block a specific image or video.</p>
+
+<p>Regular expressions can also be used to group files together for, for example:
+    <br>
+    <code>
+        Files ~ “\. (png|jpeg|gif|webp)$”
+        <br>
+        Header set X-Robots-Tag “noindex”
+    </code>
+</p>
+    <p>This will noindex any image files, regardless of their extension type.</p>
 <br>
 <br>
 <br>
