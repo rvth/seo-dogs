@@ -152,7 +152,7 @@ ul {
   }
 
   .button {
-    background-color: #b3b3b3;
+    background-color: #D9D9D9;
     color: black;
     font-family: 'Space Mono', monospace;
     padding: 10px 10px;
@@ -174,13 +174,13 @@ ul {
 
     /* unvisited link */
    a:link {
-    color: black;
+    color: #37394D;
     text-decoration: none;
   }
 
   /* visited link */
   a:visited {
-   color: black;
+   color: #37394D;
   }
 
   /* mouse over link */
@@ -222,7 +222,7 @@ ul {
   }
 
   .button_2 {
-    background-color: #b3b3b3;
+    background-color: #D9D9D9;
     color: black;
     font-family: 'Space Mono', monospace;
     padding: 10px 10px;
@@ -235,6 +235,11 @@ ul {
     position:relative;
     top:20%;
     left:50%;
+  }
+
+  .button_2:hover {
+    background-color: #97f3f6;
+    color: black;
   }
 
   header{
