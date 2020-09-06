@@ -9,9 +9,9 @@
     {% block content %}
 
 <h1>Noindex and Nofollow Tags</h1>
-    <img alt="crawling dog" src="{{url_for('static', filename='crawling.webp')}}" class="responsive">
-<p>noindex and nofollow tags are small, but powerful additions to a page, much like a jack russel. They may be small in stature, but they make sure you know they are there.</p>
-
+    <img alt="jack russell" src="{{url_for('static', filename='jr-noindex.webp')}}" class="responsive">
+<p>noindex and nofollow tags are small, but powerful additions to a page, much like a jack russell. They may be small in stature, but they make sure you know they are there.</p>
+https://www.dogstrust.org.uk/rehoming/dogs/dog/filters/~236~~~~n~~/1222691/bracken?size=small
 <h2>What is a noindex tag?</h2>
 
 <p>A noindex indicates to search engines that can still crawl a page, but they shouldn't include it in their index. It effectively stops a page from appearing in the search engine results pages (SERPs). It is useful for keeping irrelevant, unnecessary pages from being indexed.</p>
@@ -78,6 +78,7 @@
 <br>
 <br>
 <br>
+<button type="next" class="btn"><a href="{{ url_for('canonicals') }}">Next &#128062; <br> Canonicals</a></button>
 <br>
 <br>
 
