@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Titles</title>
+</head>
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+
+<h1>Page Titles</h1>
+
+    <img alt="adoptable dog" src="{{url_for('static', filename='title-tags.webp')}}" class="responsive">
+    <p>Page titles are really important for helping to make a good first impression of a web page and are really the leaders of all content on a web page. <i><a href="https://wildatheartfoundation.org/adopt/sasha/">Just like, Sasha from Wild at Heart who really enjoys being leader of the pack and makes a good impression every time you see her.</i></a></p>
+
+<h2>What is a title tag?</h2>
+
+<p>A title tag is a HTML element which is used to specify the title of a web page. These titles are displayed in search engine results pages as the clickable headline.<p>
+
+    <img alt="title tag in SERPs" src="{{url_for('static', filename='title-tag-in-SERPs.webp')}}" class="responsive">
+
+<p>While there is no exact character limit for title tags, within search result pages, the first 50-60 characters are usually shown. Google can currently display titles up to 600 pixels, so it is recommended to keep titles under 60 characters</p>
+
+<h2>Why are title tags important?</h2>
+
+<p>Title tags are important for a couple of different reasons. Firstly, they are a large factor in helping search engines understand what a page is about and as they are used in results pages they are also the first thing users are likely too see and can encourage users to click through.</p>
+
+<p>Title tags are also displayed at the top of web browsers, in the tabs found within them. This is really important for accessibility purposes, especially users who browse the web using screen readers as they describe the content of each tab that is open on a browser.</p>
+
+    <img alt="title tag in tab" src="{{url_for('static', filename='title-tag-in-tab.webp')}}" class="responsive">
+
+
+<p>This is why ensuring title tags are descriptive and unique is really important, as they inform users what content the page contains, to ensure users are able to find the information they are looking for.</p>
+    <br>
+<br>
+<button type="next" class="btn"><a href="{{ url_for('descriptions') }}">Next &#128062; <br>Meta Descriptions</a></button>
+<br>
+<br>
+<br>
+
+
+<footer class="page_footer">
+<p>&#128062; Made with &#128420; by Ruth</p>
+<p>&#169; 2020</p>
+</footer>
+    {% endblock %}
+
+</body>
+</html>

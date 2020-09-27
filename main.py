@@ -58,6 +58,25 @@ def noindex():
 def canonicals():
     return render_template("canonicals.html")
 
+@app.route("/heading-tags")
+def headings():
+    return render_template("/heading-tags.html")
+
+@app.route("/meta-data")
+def metadata():
+    return render_template("meta-data.html")
+
+@app.route("/page-titles")
+def titles():
+    return render_template("page-titles.html")
+
+@app.route("/meta-descriptions")
+def descriptions():
+    return render_template("meta-descriptions.html")
+
+@app.route("/alt-text")
+def alttext():
+    return render_template("alt-text.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

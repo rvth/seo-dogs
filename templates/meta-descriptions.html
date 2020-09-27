@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meta Descriptions</title>
+</head>
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+
+<h1>Meta Descriptions</h1>
+
+    <img alt="brave dog" src="{{url_for('static', filename='meta-descriptions.webp')}}" class="responsive">
+    <p>Meta descriptions need to look great and enticing to encourage users to visit a page, every dog is great (obviously) but I had to pick <i><a href="https://wildatheartfoundation.org/adopt/marvel/">Marvel for this one, read his story - he's a real special one.</i></a></p>
+
+<h2>What are Meta Descriptions?</h2>
+
+<p>A meta description is used to provide a description of a page that is used by search engines and displayed below a title tag in search engine results pages.</p>
+
+        <img alt="meta description example" src="{{url_for('static', filename='meta-description.webp')}}" class="responsive">
+
+<p>While meta descriptions are not a ranking factor for Google and do not directly influence rankings, they can be used to influence click-throughs to a page. Similar to title tags, it is important to draw attention to a page through the meta description, while also summarising the content.</p>
+
+<p>As with title tags, there isn't a fixed length for meta descriptions, however, it is widely recommended to keep these snippets between 150-160 characters.</p>
+
+<p>Typically every page on a website should have a unique meta description that clearly describes a page's content. There is no penalty for using the same meta description across multiple pages, but you might not be using the descriptions to their full potential and could even be unintentionally cannibalising pages in SERPs.</p>
+
+<p>For the past few years, Google's algorithms have also started to re-write some meta descriptions. This is usually done to explain the relationship between a page and a certain search query, and uses content found on the page.</p>
+    <br>
+<br>
+<button type="next" class="btn"><a href="{{ url_for('alttext') }}">Next &#128062; <br>Alt Text</a></button>
+<br>
+<br>
+<br>
+
+
+<footer class="page_footer">
+<p>&#128062; Made with &#128420; by Ruth</p>
+<p>&#169; 2020</p>
+</footer>
+    {% endblock %}
+
+</body>
+</html>

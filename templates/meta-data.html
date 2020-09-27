@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meta Data</title>
+</head>
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+
+<h1>Meta Data</h1>
+
+    <img alt="adoptable puppy" src="{{url_for('static', filename='metadata.webp')}}" class="responsive">
+    <p>Meta Tags are small but impactful elements on a web page, something else small but impactful is a puppy, <i><a href="https://wildatheartfoundation.org/adopt/waffle/">just like Waffles, find out more about her here.</i></a></p>
+
+<h2>What is metadata?</h2>
+
+<p>In short, metadata is data, about data. It helps to provide information about a webpage's content and is therefore useful for search engines to better understand websites.</p>
+
+<p>Meta data is used to structure information that is found on a page, in a predictable way that is easy for search engines to understand. For example, meta tags are used to help search engines to determine how relevant a specific page is for a search query. Rather than relying on search engines to have to extract unstructured data from a pages' content, by using metadata you are able to efficiently and effectively provide information about a page's content.</p>
+
+<p>It is important to ensure that metadata is used in a consistent and predictable way to help search engines understand the website and ultimately their ability to index content.</p>
+
+<h2>Examples of Meta Tags</h2>
+
+    <p>Common meta tags which are useful for SEO, include;
+        <br>
+        - Title Tags
+        <br>
+        - Meta Desciptions
+        <br>
+        - Viewport
+        <br>
+        - Open Graph (for social media)
+        <br>
+        - Meta Robots Tags
+    </p>
+
+    <br>
+<br>
+<button type="next" class="btn"><a href="{{ url_for('titles') }}">Next &#128062; <br> Page Titles</a></button>
+<br>
+<br>
+<br>
+
+
+<footer class="page_footer">
+<p>&#128062; Made with &#128420; by Ruth</p>
+<p>&#169; 2020</p>
+</footer>
+    {% endblock %}
+
+</body>
+</html>

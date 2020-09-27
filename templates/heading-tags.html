@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heading Tags</title>
+</head>
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+
+<h1>Heading Tags</h1>
+
+    <img alt="adoptable dogs" src="{{url_for('static', filename='heading-tags.webp')}}" class="responsive">
+    <p>Heading tags help to provide structure to a webpage, just like how having a dog can help provide structure to your life. <i><a href="https://wildatheartfoundation.org/adopt/">Check out these doggos looking for their new forever home from Wild at Heart</i></a></p>
+
+<h2>What are heading tags?</h2>
+
+<p>Heading tags are used on a webpage to indicate hierarchal levels of information, to logically break up content on a page.</p>
+
+<p>While they are not directly ranking factors, they are useful for explaining what page content is about in order to inform both users and search engines.</p>
+
+<h2>Which heading tags are available?</h2>
+
+<p>Within HTML there are six levels of headings, typically each element is styled differently with size and paragraph breaks.</p>
+
+<p>Heading tags are defined, in order of importance, from h1 to h6.</p>
+
+<p>All pages should have a primary H1 tag that is unique to the content on the page and is also placed above-the-fold. Generally the H1 tag should also include the main keyword but it is most important that it is the main descriptor of the content.</p>
+
+<p>It is typically recommended to break out sections using the heading tags in an ascending order, e.g. H2, H3, H4, H5. This is because they help to provide additional signals and context. It is normal to have multiple occurrences of h2 to h6 tags on a single page.</p>
+
+<h2>Why are heading tags important?</h2>
+
+<p>Heading tags are super important for helping users to understand the structure and content of a page, they can also be used to break up text into logical sections.</p>
+
+<p>More often than not, users will use heading tags to scan a page in order to find the most relevant information and in order to understand exactly what the content is about.</p>
+
+<p>Similarly, search engines also use heading tags to understand content, and they can be optimised to further help crawlers gather the context of a page.</p>
+    <br>
+<br>
+<button type="next" class="btn"><a href="{{ url_for('metadata') }}">Next &#128062; <br> Meta Data</a></button>
+<br>
+<br>
+<br>
+
+
+<footer class="page_footer">
+<p>&#128062; Made with &#128420; by Ruth</p>
+<p>&#169; 2020</p>
+</footer>
+    {% endblock %}
+
+</body>
+</html>

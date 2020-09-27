@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alt Text</title>
+</head>
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+
+<h1>Alt Text</h1>
+
+    <img alt="happy puppy" src="{{url_for('static', filename='alt-text-example.webp')}}" class="responsive">
+    <p>Alt text are small but powerful entities on a website, and are super useful for crawlers and humans. Small and powerful, just like little <i><a href="https://wildatheartfoundation.org/adopt/piper-1/">Piper from Wild at Heart - find out more about her here.</i></a></p>
+<h2>What is alt text?</h2>
+
+<p>Alt text is used to describe what an image contains and is useful for both search engines and users.</p>
+
+<p>They can be used by search engines to help them understand what an image is, which is helpful for image search, and can also provide further context for the whole page. For users, alt text is helpful if an image is unable to load, but most importantly for users who rely on assistive technology, such as screen readers, to help them understand what an image contains.</p>
+
+        <img alt="alt text example" src="{{url_for('static', filename='alt-tag-example.webp')}}" class="responsive">
+
+
+<h2>Tips for writing alt text</h2>
+
+<p>When writing alt text, one of the most important things is to ensure you describe the image clearly, as the main purpose of alt text is to provide explanations to users who are not able to see them. As screen readers cut off alt text at around 100 characters, it is also recommended to keep the descriptions short.</p>
+
+<p>You can include target keywords within alt text, to signal to search engines the relevance of a page, but it's important to avoid old school keyword stuffing tactics. Make sure the descriptions are logical and describe an image for users, rather than just focusing on search engines.</p>
+    <br>
+<br>
+<br>
+<br>
+<br>
+
+
+<footer class="page_footer">
+<p>&#128062; Made with &#128420; by Ruth</p>
+<p>&#169; 2020</p>
+</footer>
+    {% endblock %}
+
+</body>
+</html>
