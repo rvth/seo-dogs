@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Site Architecture</title>
+</head>
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+
+<h1>URLs</h1>
+
+    <img alt="lion dog" src="{{url_for('static', filename='site-architecture.webp')}}" class="responsive">
+    <p>Just like a website's architecture is the foundation of it's success, <i><a href="https://wildatheartfoundation.org/adopt/lion-1/">Lion is the foundation part of her siblings (she also loves a cuddle).</i></a></p>
+
+<h2>What is site architecture?</h2>
+
+<p>Site architecture refers to the structure of content on a website. This includes the hierarchy of pages and how they are linked to each other which are the fundamentals of a crawlable site. It also includes the functional & visual aspects that help users navigate the site and ultimately complete their desired goal.</p>
+
+<p>Essentially a site's architecture affects how search engines crawl it, as well as how users navigate it.</p>
+
+<h2>The impact of site architecture</h2>
+
+<p>Having an optimised site architecture has multiple benefits for both users and search engines.</p>
+
+<h3>The impact of site architecture on users</h3>
+
+<p>Having an easy to understand site architecture helps users to find what they are looking for on a site as quickly as possible.</p>
+
+<p>A site's structure will directly impact a user's journey across the site, determining which pages they will be able to navigate to, and whether they will be able to complete their primary goal of visiting the site.</p>
+
+<p>It will also impact a user's experience and engagement, in order to keep users happy and make sure they return, it is imperative that a site's structure matches the expectations of users and matches their journey and intent.<p>
+
+<h3>The impact of site architecture on search engines</h3>
+
+<p>Providing a positive user experience is a key signal to search engines and will help them to rank your site higher. But there are also other benefits of an optimised site structure for search engines.<p>
+
+<p>The first is by providing a clear map of which pages search engine crawlers should crawl, and ensure they see your most important pages first. Ensuring websites are structured in a way that makes it easy for search engines to crawl and find pages will help to display the importance of different pages, which will in turn help with indexing.</p>
+
+<p>Essentially the structure of a website will determine how often search engines are able to crawl it, and how efficient that crawling will be.</p>
+
+<h2>What is information architecture?</h2>
+
+<p>Information architecture involves organising and structuring the pages on a website in a way that is logical, easy to understand and navigate through.</p>
+
+<p>An optimised information architecture helps users understand where they are on a website and how they can navigate around to find relevant content. Just like SEO, information architecture is also about findability, ensuring content is findable and meets a user's search intent.</p>
+
+<h2>Website navigation</h2>
+
+<p>Having a clear website navigation is one of the best methods for helping users find the most important pages on a site, as well as to inform search engines of the most important pages.</p>
+
+<p>When a user is starting on a homepage, the navigation is used to help them discover which pages they can easily navigate to, as well as displaying the main pages on the site. For users who land on any other page, the navigation is used to orientate them to other content in order to move them forward in their journey and match their intent.</p>
+
+<h3>Examples of different navigations</h3>
+
+<p><strong>Single-Bar Navigation</strong>
+
+        <img alt="Single bar navigation" src="{{url_for('static', filename='single-bar.webp')}}" class="responsive">
+
+<p><strong>Double-Bar Navigation</strong>
+
+        <img alt="Double bar navigation" src="{{url_for('static', filename='double-bar.webp')}}" class="responsive">
+
+<p><strong>Dropdown Navigation</strong>
+
+        <img alt="Dropdown navigation" src="{{url_for('static', filename='dropdown.webp')}}" class="responsive">
+
+<p><strong>Dropdown Navigation with Flyouts</strong>
+
+        <img alt="Dropdown menu with flyouts" src="{{url_for('static', filename='flyouts.webp')}}" class="responsive">
+
+<p><strong>Mega Menus</strong>
+
+        <img alt="Mega Menu" src="{{url_for('static', filename='megamenu.webp')}}" class="responsive">
+
+<p><strong>Secondary side navigation</strong>
+
+        <img alt="Sidebar navigation" src="{{url_for('static', filename='sidebar.webp')}}" class="responsive">
+
+<p><strong>Footer navigation</strong>
+
+        <img alt="Footer navigation" src="{{url_for('static', filename='footer.webp')}}" class="responsive">
+
+<br>
+<button type="next" class="btn"><a href="{{ url_for('sitemap') }}">Next &#128062; <br>Sitemaps</a></button>
+<br>
+<br>
+<br>
+
+
+<footer class="page_footer">
+<p>&#128062; Made with &#128420; by Ruth</p>
+<p>&#169; 2020</p>
+</footer>
+    {% endblock %}
+
+</body>
+</html>

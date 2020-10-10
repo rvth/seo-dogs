@@ -78,5 +78,21 @@ def descriptions():
 def alttext():
     return render_template("alt-text.html")
 
+@app.route("/site-structure/site-architecture")
+def architecture():
+    return render_template("site-architecture.html")
+
+@app.route("/site-structure/sitemap")
+def sitemap():
+    return render_template("sitemaps.html")
+
+@app.route("/site-structure/urls")
+def urls():
+    return render_template("urls.html")
+
+@app.route("/site-structure/https")
+def https():
+    return render_template("HTTPs.html")
+
 if __name__ == "__main__":
     app.run(debug=True)

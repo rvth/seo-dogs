@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sitemaps</title>
+</head>
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+
+<h1>Sitemaps</h1>
+
+    <img alt="all the dogs" src="{{url_for('static', filename='sitemap.webp')}}" class="responsive">
+    <p>Sitemaps are a collection of all the URLs on a page <i><a href="https://wildatheartfoundation.org/adopt/">just like WAHF's adoption page is a list of all dogs available for adoption.</i></a></p>
+
+<h2>What is a sitemap?</h2>
+
+<p>A sitemap is essentially a list of all of the URLs found on a website. It acts as a map for search engines to tell them which content is available on the site and gives them a clear path to access it.<p>
+
+<p>Sitemaps also help search engines to index pages faster and are particularly valuable for websites who have a large number of pages with a very deep architecture, as well as sites that frequently add or change content.<p>
+
+<h3>Sitemap index</h3>
+
+<p>A sitemap can contain a maximum of 50,000 URLs, and when this limit is exceeded, it is necessary to split URLs across multiple sitemaps. These sitemaps are then combined into one large sitemap index, which is essentially a sitemap for sitemaps.</p>
+
+<p>A sitemap index is particularly useful for large websites, with multiple sections and categories which can be broken down into smaller, logical sitemaps.</p>
+
+<h3>What you should include in sitemap</h3>
+
+<p>It's important to only include SEO relevant pages in a sitemap, this is because they are the pages that you would like to be crawled, which may not be every page on a website. If the website is a large website, including only relevant pages can also help with crawl budget.</p>
+
+<p>Including only SEO pages, helps search engines crawl more efficiently and intelligently and will ensure better indexation of your key pages.<p>
+
+<p>Examples of pages you would not want to include in a sitemap include; non-canonical pages, duplicated pages, paginated pages, parameter pages and site search result pages.</p>
+
+<h2>The elements of a sitemap</h2>
+
+<p>There are a couple of elements which make up a sitemap. Some of these are compulsory, while some are just optional.<p>
+
+<h3>loc tag</h3>
+
+<p>The first compulsory tag is the loc tag, which should include the canonical version of a URL. It should also reflect the protocol of the site, for example http or https and www. or non www.</p>
+
+<h3>last mod tag</h3>
+
+<p>This tag is optional, but is recommended as it informs search engines when a page was last modified. Most search engines use this data to discover when a page changed and if it is necessary for them to re-crawl it. However, it's important to only use the tag when changes have been made, rather than using it to trick search engines.</p>
+
+<h3>changefreq tag</h3>
+
+<p>While not used widely by search engines anymore, the change frequency tag was used to hint to search engines how frequently a page will change.</p>
+
+<h3>prioritytag</h3>
+
+<p>Another optional tag, the priority tag is used as a hint to how important a page is compared to other URLs on a site. It runs on a scale of 0.0 to 1.0, with the larger the number the higher importance of the page. This tag is widely ignored by search engines.</p>
+
+
+<br>
+<button type="next" class="btn"><a href="{{ url_for('urls') }}">Next &#128062; <br>URLs</a></button>
+<br>
+<br>
+<br>
+
+
+<footer class="page_footer">
+<p>&#128062; Made with &#128420; by Ruth</p>
+<p>&#169; 2020</p>
+</footer>
+    {% endblock %}
+
+</body>
+</html>
