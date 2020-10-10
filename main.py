@@ -34,47 +34,47 @@ def links():
 def international():
     return render_template("international-seo.html")
 
-@app.route("/crawling")
+@app.route("/crawling-and-indexing/crawling")
 def crawl():
     return render_template("crawling.html")
 
-@app.route("/rendering")
+@app.route("/crawling-and-indexing/rendering")
 def rendering():
     return render_template("rendering.html")
 
-@app.route("/indexing")
+@app.route("/crawling-and-indexing/indexing")
 def indexing():
     return render_template("indexing.html")
 
-@app.route("/robotstxt")
+@app.route("/crawling-and-indexing/robotstxt")
 def robots():
     return render_template("robotstxt.html")
 
-@app.route("/noindex-and-nofollow")
+@app.route("/crawling-and-indexing/noindex-and-nofollow")
 def noindex():
     return render_template("noindex-and-nofollow.html")
 
-@app.route("/canonicals")
+@app.route("/crawling-and-indexing/canonicals")
 def canonicals():
     return render_template("canonicals.html")
 
-@app.route("/heading-tags")
+@app.route("/on-page/heading-tags")
 def headings():
     return render_template("/heading-tags.html")
 
-@app.route("/meta-data")
+@app.route("/on-page/meta-data")
 def metadata():
     return render_template("meta-data.html")
 
-@app.route("/page-titles")
+@app.route("/on-page/page-titles")
 def titles():
     return render_template("page-titles.html")
 
-@app.route("/meta-descriptions")
+@app.route("/on-page/meta-descriptions")
 def descriptions():
     return render_template("meta-descriptions.html")
 
-@app.route("/alt-text")
+@app.route("/on-page/alt-text")
 def alttext():
     return render_template("alt-text.html")
 
