@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Site Speed</title>
+</head>
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+
+<h1>Site Speed</h1>
+
+    <img alt="all the dogs" src="{{url_for('static', filename='site-speed.webp')}}" class="responsive">
+    <p>Imagine how great having a site which is as fast and agile as a border collie would be. And then imagine how great it would be to have a border collie <i><a href="https://wildatheartfoundation.org/adopt/henry/">like Henry as a dog.</i></a></p>
+
+<h2>Why is site speed important?</h2>
+
+<p>It’s no secret that site speed is important for SEO. Not only is it used as a ranking factor by Google, but it’s also imperative for providing a good experience for users from the second they land on your site.<p>
+
+<p>A slow website and poor performance will impact user experience and accessibility, as well as affect a business’s growth and, ultimately, revenue.</p>
+
+<h3>Users</h3>
+
+<p>A fast site is imperative for providing a good user experience, <a href="https://www.thinkwithgoogle.com/marketing-resources/data-measurement/mobile-page-speed-new-industry-benchmarks/">research from Google</a> has showed that the slower a site is, the more likely it is for users to leave without consuming any content or performing any actions.</p>
+
+<p>An <a href="https://www.thinkwithgoogle.com/intl/en-154/insights-inspiration/research-data/need-mobile-speed-how-mobile-latency-impacts-publisher-revenue/">additional study</a> shows that 53% of visitors would leave a mobile site if the page took longer than 3 seconds to load.</p>
+
+<h3>Search engines</h3>
+
+<p>Over the last month, Google has announced a number of advancements to how they will be measuring user experience through key speed and performance metrics, with an update coming in early 2021 which will fast favour sites.</p>
+
+<p>In addition, a slow loading site can also cost you in terms of rankings, crawl budget and crawl rate. This is because site speed and response time affect the rate and frequency in which search engine bots crawl the site.</p>
+
+<p>Search engines will take a few factors into consideration when assessing site speed, including loading and rendering times, because these give an accurate picture of how a user will experience a sites speed.</p>
+
+<h2>Metrics to be aware of</h2>
+
+    <p>The current metrics used by Google are:</p>
+
+<h3>First Contentful Paint (FCP)</h3>
+
+<p>First Contentful Paint is the time it take for the browser to render the first element of content defined in the DOM, this could be some text, an image or a section of navigation, for example.<p>
+
+<h3>Largest Contentful Paint (LCP)</h3>
+
+<p>This user-centric metric displays the render time of the largest element that is visible in the viewport.</p>
+
+<h3>First Input Delay (FID)</h3>
+
+<p>First Input Delay is a user-centric metric for measuring load responsiveness. It quantifies the experience users feel when they try to interact with an unresponsive page.</p>
+
+<h3>Time to Interactive (TTI)</h3>
+
+<p>Time To Interactive measures the point when a page is rendered and able to respond to uder requests.</p>
+
+<h3>Total Blocking Time (TBT)</h3>
+
+<p>TBT measures the load responsiveness of a website and quantifies the non-interactivity of a page before it is usable.</p>
+
+<h3>Cumulative Layout Shift (CLS)</h3>
+
+<p>Another user-centric metric, CLS measures the visual stability of the page by quantifying how often users experience unexpected layout shifts.</p>
+
+<p>Each of these metrics has different weights, which impact the overall performance score provided.</p>
+
+<h2>Tips for performance optimisation</h2>
+
+<p>When looking to optimise a page's speed and performance, there are a few things to investigate and optimise, including implementing caching, focusing on the above-the-fold content and inlining code. There is also the potential of compressing and minifying HTML, CSS, JavaScript and image files as well as splitting code up and focusing on the highest priority necessary files.</p>
+
+<p>In addition, reviewing JavaScript resources and considering if there is a way to bundle, split or load the files asynchronously. Images and fonts can also be the cause of a slow site speed, so looking into compressing and optimising these is a good place to start.</p>
+
+<h2>Measuring site speed</h2>
+
+<p>There are two main methods for measuring site speed, synthetic testing in a lab environment, and Real User Measurement (RUM) which measures what actual users experience when visiting a  website.</p>
+
+<p>There are several ways you can measure a site's speed. The first is using a web crawler (like DeepCrawl), which allows you to run regular crawls and monitor site speed over time. It is also typically possible to automate these reports by setting crawls to run weekly, fortnightly or monthly and receive notifications when they are ready to review.</p>
+
+<p>Google Search Console also introduced the speed report last year, which enables you to see an aggregated view of your site's key speed field metrics using data from the Chrome User Experience.</p>
+
+<p>There is also the ability to drill down into specific issues and find examples of groups of pages that need improvement.</p>
+
+<p>There are also a number of free tools, such as Googles Page Speed Insights, GTMetrix, Chromes User Experience Report, Lighthouse and WebPageTest. These typically allow you to test on a URL basis, one at a time.</p>
+
+<br>
+<button type="next" class="btn"><a href="{{ url_for('accessibility') }}">Next &#128062; <br>Accessibility</a></button>
+<br>
+<br>
+<br>
+
+
+<footer class="page_footer">
+<p>&#128062; Made with &#128420; by Ruth</p>
+<p>&#169; 2020</p>
+</footer>
+    {% endblock %}
+
+</body>
+</html>
+

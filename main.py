@@ -94,5 +94,13 @@ def urls():
 def https():
     return render_template("HTTPs.html")
 
+@app.route("/user-experience/site-speed")
+def speed():
+    return render_template("site-speed.html")
+
+@app.route("/user-experience/accessibility")
+def accessibility():
+    return render_template("accessibility.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
