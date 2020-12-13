@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirects</title>
+</head>
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+
+<h1>Redirects</h1>
+
+    <img alt="all the dogs" src="{{url_for('static', filename='redirects.webp')}}" class="responsive">
+    <p>Redirects help pages find a new home on a website as every page needs a home <i><a href="https://wildatheartfoundation.org/adopt/sky/">just like WAHF's Sky who is also looking for her forever home.</i></a></p>
+
+<h2>What is a redirect?</h2>
+
+<p>A redirect is a way of automatically forwarding a page to another. If a page has a redirect, then when a user, or search engine visits it, they will immediately be sent to another page instead.</p>
+
+<h2>How do redirects work?</h2>
+
+<p>Pages with a redirect will contain a 3xx status code response header, together with a location header which contains the URL of the page that users will be redirected to.</p>
+
+<p>There are several different types of redirects, all do slightly different things and display different signals to search engine crawlers.</p>
+
+<h3>301 Redirects</h3>
+
+<p>A 301 redirect is the most common redirect used by SEOs as they signal that a page has been moved permanently to another URL. This is important for search engines in particular as it helps the page to maintain the authority it has gained.</p>
+
+<h3>302 Redirects</h3>
+
+<p>A 302 redirect is used to signal that has page has been temporarily moved to another URL, this means that the redirect will not impact the webpage's search engine presence as the page is expected to return or may be used for device targeting.</p>
+
+<h3>303 Redirects</h3>
+
+<p>A 303 redirect is also used to indicate a temporary redirect as it signals that the target page isn't available but there is a resource descriptive of the original target. 303 redirects are never cacheable however, which is why they are sometimes preferred over 302 redirects.</p>
+
+<h3>307 Redirects</h3>
+
+<p>307 redirects are another temporary redirect and are similar to a 302 status. However, they are known to be more precise in stating that a page has been moved to a temporary location and is expected to return. This is why they should only be used if a redirect is temporary and not for permanent redirects.</p>
+
+<h3>Meta Redirects</h3>
+
+<p>Meta redirects are used to instruct a browser to load another URL once a page has loaded and they are contained within the head of the HTML. It is not recommended to use a meta redirect as they can be seen as deceptive to search engines and could affect how pages are able to be indexed and ultimately displayed in search results.</p>
+
+<h3>JavaScript Redirects</h3>
+
+<p>JavaScript redirects are similar to meta refresh redirects but require JavaScript to be rendered in order to redirect to another page. This means that a page may load and show users information before it automatically redirects to another page, therefore potentially causing a poor user experience. As they require the client to be able to interpret JavaScript, these redirects are not recommended over other redirect types such as 301.</p>
+
+<h2>When are redirects necessary?</h2>
+
+<p>Redirects are used for a number of different reasons as websites change overtime. Examples include; due to broken pages linked internally or with backlinks, if a page moves to a new location or the website domain name or folder structure changes. In order to ensure users are still able to find content useful to them, redirects are used to automatically direct them to the most relevant page.</p>
+
+<h2>Redirects issues to look out for</h2>
+
+<p>There are a couple of things to look out for when implementing redirects which are often overlooked;</p>
+
+<h3>Redirect chains</h3>
+
+<p>A redirect chain occurs when there is more than one redirect between the redirecting URL and the final destination page. These often happen accidentally when redirects end up getting redirected after time.</p>
+
+<p>Redirect chains can impact user experience and crawl budget as each redirect needs to be processed and can lead to latency. Search engines also may stop following redirect chains after a certain number of redirects, for example Google follows up to 5 redirects.</p>
+
+<p>Other ways redirect chains can affect search engine crawling is if a disallowed URL is contained within a redirect chain, as they will not be followed. It is best practice to avoid internal links pointing to redirected pages.</p>
+
+<h3>Redirect loops</h3>
+
+<p>A redirect loop is when a page is redirected back to itself. This can also turn into an infinite number of redirects where the loop seemingly never ends.</p>
+
+<p>Redirect loops often occur due to caching, where a redirect is temporarily cached but then ends up reversed. If a user visited the URL before this was reversed and then returns afterwards, they may be redirected back to the original URL, which then also gets cached which results in the loop between the two pages. Confusing right?</p>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+<footer class="page_footer">
+<p>&#128062; Made with &#128420; by Ruth</p>
+<p>&#169; 2020</p>
+</footer>
+    {% endblock %}
+
+</body>
+</html>

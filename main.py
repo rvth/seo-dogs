@@ -102,5 +102,17 @@ def speed():
 def accessibility():
     return render_template("accessibility.html")
 
+@app.route("/links/internal-links")
+def internallinks():
+    return render_template("internal-links.html")
+
+@app.route("/links/backlinks")
+def backlinks():
+    return render_template("backlinks.html")
+
+@app.route("/links/redirects")
+def redirects():
+    return render_template("redirects.html")
+
 if __name__ == "__main__":
     app.run(debug=True)

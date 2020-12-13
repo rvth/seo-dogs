@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Internal Links</title>
+</head>
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+
+<h1>Internal Links</h1>
+
+    <img alt="all the dogs" src="{{url_for('static', filename='internal-links.webp')}}" class="responsive">
+    <p>Internal links may be small, but they're mighty <i><a href="https://wildatheartfoundation.org/adopt/diego/">just like WAHF's Diego who is available for adoption now.</i></a></p>
+
+<h2>What are internal links?</h2>
+
+    <p>Internal links are links that take a user from one page to another on the same domain. An example of an internal link you will find on most websites is within the navigation. Here is an <a href="www.seo-dogs.co.uk">example of an internal link to the SEO Dogs homepage.</a></p>
+
+<p>Internal links are used to help users easily navigate around a website, linking them to other relevant pages. They also help to define a site hierarchy structure and spread equity and authority around the site.</p>
+
+<h2>Why internal links are important for users</h2>
+
+<p>Internal links are super important for users as they help them to navigation around the site. They should typically link to other relevant pages to provide more context to a user or to send them to a page that they will be interested in.</p>
+
+<p>Defining a user journey and their optimal journey around the site, where they will perform a desired action or find the information they are looking for.</p>
+
+<p>As they are important for user experience, it's important to ensure internal links do not point to a irrelevant, empty or broken page as this will frustrate users.</p>
+
+<h2>Why internal links are important for search engines</h2>
+
+<p>In addition to users, internal links are also important for search engines for several reasons. Firstly they help search engine crawlers discover and ultimately index content, particularly new content that they have not crawled before.</p>
+
+<p>Internal links also help to pass authority around a site, which essentially displays to search engines that a page is more important than an other which does not have as many internal links. The quality of these internal links are also just as important, like most things in SEO - quality > quantity.</p>
+
+<p>Pages which have no internal links to them are known as orphan pages and will not be found by search engines or users. This is why it's important to ensure none of your important pages are orphaned.</p>
+
+<h3>PageRank</h3>
+
+<p>PageRank is a Google algorithm that is used to help rank pages in search engine results pages. It is used to measure the importance of webpages based on the number and quality of links to a page.</p>
+
+<p>This includes both internal links and backlinks to estimate how important a page is. This is based on an underlaying assumption that the more links a website has, the more useful and important it is.</p>
+
+<h2>Implementing internal links</h2>
+
+<p>In my opinion, the most effective internal linking strategy is one which feels natural and is focused on providing the best experience for users. This could include creating hub pages for certain topics, linking to complimentary products or helping users to find the most relevant reading topic from one page to another.</p>
+
+<h3>Anchor text</h3>
+
+<p>Anchor text is a clickable part of text which is used as a hyperlink to another page, i.e the text  that is shown for an internal link. For example, rather than including a messy looking link such as https://seo-dogs.co.uk/links/internal-links/ you could use anchor text which such as 'read more about internal links'. This still informs users of the content of the page being linked to but looks nicer and includes a call to action to encourage users to click.</p>
+
+<p>When writing anchor text it's important to ensure it is relevant to the target page, while also being succinct and avoids keyword stuffing tactics.</p>
+
+    <p>Anchor text is also important for <a href="{{ url_for('accessibility') }}">accessibility</a>, if a user is navigating your website with a screen reader for example, the anchor text will inform them of the page they will be visiting next and help determine whether it is worth visiting.</p>
+
+<h3>Follow vs No-follow</h3>
+
+<p>As standard, internal links will either be tagged with a follow or no-follow directive. These are used to inform search engines whether they should pass authority to the page or not.<p>
+
+<p>A follow tag will enable authority to be passed from one page to another, helping with PageRank and informing search engines that these pages are of higher importance.</p>
+
+<p>A no-follow tag is used to inform search engines not to pass authority to a certain page. These are useful if a page being linked to is important to users once they are on a site, but are not necessary for search engines to crawl.</p>
+
+
+
+
+<br>
+<button type="next" class="btn"><a href="{{ url_for('backlinks') }}">Next &#128062; <br>Backlinks</a></button>
+<br>
+<br>
+<br>
+
+
+<footer class="page_footer">
+<p>&#128062; Made with &#128420; by Ruth</p>
+<p>&#169; 2020</p>
+</footer>
+    {% endblock %}
+
+</body>
+</html>

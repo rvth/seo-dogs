@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Backlinks</title>
+</head>
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+
+<h1>Backlinks</h1>
+
+    <img alt="all the dogs" src="{{url_for('static', filename='backlinks.webp')}}" class="responsive">
+    <p>Backlinks help to give a boost and vote of confidence to other domains, we can't deny they're pretty important <i><a href="https://wildatheartfoundation.org/adopt/mochi/">but not as important as Mochi's neckerchief (in my opinion) find out more about her here.</i></a></p>
+
+<h2>What are backlinks?</h2>
+
+<p>Backlinks are links which go from one domain to another. That's essentially it, when one website links to another.</p>
+
+<p>The most valuable backlinks are those which come from trusted and authoritative websites, it is also important that the page which is being linked to is topically related to the page that linking to it.</p>
+
+<p>The best way to gain backlinks is to create content that is worth being linked to. For example, a unique story, valuable information from a study or a linkable asset such as a whitepaper or infographic.</p>
+
+<p>Just a quick disclaimer, I have never really had any experience with gaining or implementing  backlinks or working on any kind of backlink strategy :)</p>
+
+<h2>Why are backlinks so important?</h2>
+
+<p>Backlinks are important for SEO as they are essentially used by search engines to show a vote of confidence for the website. Pages which have a high number of backlinks, from a range of different domains, will typically achieve a higher ranking in search engine results pages. This is because backlinks signal that a website, or page, is worth linking to as the content is useful and informative, and therefore highlights that a page provides value to users.</p>
+
+    <p>Just like with <a href="{{ url_for('internallinks') }}">internal links</a>, backlinks impact a site's PageRank and because of this backlinks remain a key ranking factor for search engines such as Google.</p>
+
+
+
+<br>
+<button type="next" class="btn"><a href="{{ url_for('redirects') }}">Next &#128062; <br>Backlinks</a></button>
+<br>
+<br>
+<br>
+
+
+<footer class="page_footer">
+<p>&#128062; Made with &#128420; by Ruth</p>
+<p>&#169; 2020</p>
+</footer>
+    {% endblock %}
+
+</body>
+</html>

@@ -13,8 +13,44 @@
     {% block content %}
 
 <h1>Links</h1>
-    <h2>Coming soon!</h2>
-<div style="width:90%;height:0;padding-bottom:30%;position:relative;"><iframe src="https://giphy.com/embed/2WGDUTmsB4DzFuvZ2t" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/keepupwithjaz-dog-staring-kuwj-2WGDUTmsB4DzFuvZ2t"></a></p>
+
+<div class="cards_2">
+    <div class="card_2">
+      <header>
+        <h2>Internal Links</h2>
+      </header>
+      <p>Internal links are links that take a user from one page to another on the same domain.</p>
+        <div class="button_2">
+          <a href="{{ url_for('internallinks') }}"> &#128062; Explore</a>
+        </div>
+      </div>
+
+      <div class="card_2">
+        <header>
+          <h2>Backlinks</h2>
+          <p>Backlinks are links which go from one domain to another. That's essentially it, when one website links to another.</p>
+        </header>
+        <div class="button_2">
+          <a href="{{ url_for('backlinks') }}">&#128062; Explore</a>
+        </div>
+      </div>
+
+      <div class="card_2">
+        <header>
+          <h2>Redirects</h2>
+          <p>A redirect is a way of automatically forwarding one page to another on the same domain.</p>
+        </header>
+        <div class="button_2">
+          <a href="{{ url_for('redirects') }}">&#128062; Explore</a>
+        </div>
+      </div>
+</div>
+
+<br>
+<br>
+<br>
+
+
 
 <footer class="page_footer">
 <p>&#128062; Made with &#128420; by Ruth</p>
