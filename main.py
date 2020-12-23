@@ -114,5 +114,13 @@ def backlinks():
 def redirects():
     return render_template("redirects.html")
 
+@app.route("/international-seo/hreflang")
+def hreflang():
+    return render_template("hreflang.html")
+
+@app.route("/international-seo/tld-and-cctld")
+def tld_cctld():
+    return render_template("tld-and-cctld.html")
+
 if __name__ == "__main__":
     app.run(debug=True)

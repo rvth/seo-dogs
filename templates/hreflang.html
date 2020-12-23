@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hreflang</title>
+</head>
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+
+<h1>Hreflang</h1>
+
+    <img alt="korean puppy" src="{{url_for('static', filename='hreflang.webp')}}" class="responsive">
+    <p>Hreflang tags are pretty small elements of a page, but they can have a big impact for sites that have several country variations. And small but mighty is how Wild at Heart's <i><a href="(https://wildatheartfoundation.org/adopt/poly/)">Poly is described, check out his profile here.</i></a></p>
+
+<h2>What is hreflang?</h2>
+
+<p>Hreflang is an attribute used to specify the geographic targeting of a page on a website. It is used when there are multiple versions of a page in different languages, targeting different locales, to inform search engines of the variations and help users find the correct version for them.</p>
+
+<p>You can target both the region and language within hreflang tags, which informs search engines which version of a page they should serve to users depending on their location and language. However, it's important to remember that hreflang is just a hint rather than a directive so it is not guaranteed that the correct version will be shown in search, which is why it is important to still ensure content is localised.</p>
+
+<h2>Why is hreflang necessary?</h2>
+
+<p>There are a couple of key reasons hreflang is necessary for some websites. The first being duplicate content issues. If you have the same version of a page with one targeting english speaking US visitors and the other targeting english speaking UK visitors, this can cause content duplication. The hreflang tags help to solve this issue to ensure search engines understand the connection but don't see the content as duplicate.</p>
+
+<p>Ensuring users are able to find the most relevant page based on their location and language also helps to improve their experience on a website. If a user clicks through to a page that is correctly targeted to them they are likely to spend longer on a page, visit more pages on the website and are less likely to bounce back to the search results.</p>
+
+
+
+<h2>How to implement hreflang</h2>
+
+<p>There are three ways to implement hreflang tags, the best method depends on a number of factors including the size of the websites, and the ability you have to update pages.</p>
+
+<h3>HTML head</h3>
+
+<p>The first, and typically common method, is using a HTML tag in the head of the webpage. This is the quickest and easiest way to implement the hreflang tags as all that is required is an extra HTML tag within the head of the page. </p>
+
+<p>An example of HTML head hreflang tags is similar to this:</p>
+    <img alt="hreflang tags in head" src="{{url_for('static', filename='hreflang-head.webp')}}" class="responsive">
+
+
+<h3>XML sitemaps</h3>
+
+<p>The next approach is implementing hreflang tags within an XML sitemap, sitemaps can be used to include relevant markup for each URL included and this covers the hreflang attribute. They can be implemented using a xhtml:link attribute, for example:</p>
+    <img alt="hreflang tags in xml sitemap" src="{{url_for('static', filename='hreflang-sitemaps.webp')}}" class="responsive">
+
+
+<h3>HTTP headers</h3>
+
+<p>Another method is implementing hreflang through HTTP headers, this is particularly useful for any elements on a website which are not HTML, for example PDF files. The HTTP headers method allows you to add rel alternate markup to document variants to specify the language and country targeting. This method can also be used for normal HTML pages too.</p>
+
+<p>Here is an example of a PDF file with hreflang tags added to the HTTP header:</p>
+
+    <img alt="hreflang tags in headers" src="{{url_for('static', filename='hreflang-headers.webp')}}" class="responsive">
+
+
+<h3>x-default</h3>
+
+<p>You may have seen in the examples above, a tag which is classed as x-default. This tag can be used to display the default version of a page that should be shown in the instances where there is no specific language or country targeted tag.</p>
+
+<h2>Common hreflang issues</h2>
+
+<p>Hreflang is commonly known as one of the most complex areas of technical SEO, and there are a lot of complex factors to consider to ensure the implementation is correct. If the set-up of these tags is incorrect, they will not be valid and therefore search engines will ignore them.</p>
+
+ <h3>Non-reciprocal links</h3>
+
+<p>Hreflang tags are bi-directional, which means in order for them to be valid they need to reference another page which has the same tag on it. For example, the English version of a page has a hreflang to the Chinese version of the same page, that Chinese version must also have a hreflang tag pointing back to the English page.</p>
+
+<h3>Incorrect language codes</h3>
+
+<p>In order to be recognised by search engines, all hreflang attributes need to use the <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1</a> format for language codes. A common error that a lot of SEOs have seen is the incorrect tag being used for United Kingdom, as the correct code is gb rather than uk. Therefore it is important to check all the language codes being used against the ISO formats to ensure they are correct.</p>
+
+<h3>Conflicting canonical tags</h3>
+
+<p>As a canonical tag is used to inform search engines which page should be indexed, it is important to use both a self-referencing canonical tag with hreflang tags. This is because hreflang tags do not block the indexing of alternative versions of a page, as they are needed for the specific search variation. If the canonical tag is pointing to a different URL, this can cause confusion for
+
+<p>In addition if all canonical tags, even those for the alternate versions are pointing to the English version of the site, instead of the targeted pages, search engines may only index the English version rather than the correctly targeted page for local users.</p>
+
+<br>
+<button type="next" class="btn"><a href="{{ url_for('tld_cctld') }}">Next &#128062; <br>TLDs & ccTLDs</a></button>
+<br>
+<br>
+<br>
+
+<footer class="page_footer">
+<p>&#128062; Made with &#128420; by Ruth</p>
+<p>&#169; 2020</p>
+</footer>
+    {% endblock %}
+
+</body>
+</html>
