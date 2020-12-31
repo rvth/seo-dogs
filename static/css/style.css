@@ -72,6 +72,11 @@ img {
   height: auto;
 }
 
+.footericon {
+  width: 27px;
+  max-width: 27px;
+  height: auto;}
+
 /* layout */
 
 /* nav and header */
