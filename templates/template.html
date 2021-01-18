@@ -14,13 +14,34 @@
     <meta property="og:image" content="{{url_for('static', filename='structure.webp')}}">
     <meta property="og:url" content="{{ url_for('home') }}">
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5S3WN5G');</script>
-<!-- End Google Tag Manager -->
+<script src="https://unpkg.com/web-vitals@0.2.2/dist/web-vitals.es5.umd.min.js"></script>
+
+<script>
+function sendToGoogleAnalytics({name, delta, id}) {
+    // Assumes the global `gtag()` function exists, see:
+    // https://developers.google.com/analytics/devguides/collection/gtagjs
+    gtag('event', name, {
+        event_category: 'Web Vitals',
+        // Google Analytics metrics must be integers, so the value is rounded.
+        // For CLS the value is first multiplied by 1000 for greater precision
+        // (note: increase the multiplier for greater precision if needed).
+        value: Math.round(name === 'CLS' ? delta * 1000 : delta),
+        // The `id` value will be unique to the current page load. When sending
+        // multiple values from the same page (e.g. for CLS), Google Analytics can
+        // compute a total by grouping on this ID (note: requires `eventLabel` to
+        // be a dimension in your report).
+        event_label: id,
+        // Use a non-interaction event to avoid affecting bounce rate.
+        non_interaction: true,
+    });
+}
+
+addEventListener('DOMContentLoaded', function() {
+    webVitals.getCLS(sendToGoogleAnalytics);
+    webVitals.getFID(sendToGoogleAnalytics);
+    webVitals.getLCP(sendToGoogleAnalytics);
+});
+</script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -36,10 +57,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5S3WN5G"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
 <header>
     <nav>
