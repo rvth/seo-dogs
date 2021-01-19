@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Rendering</title>
-</head>
-<body>
+
     {% extends "template.html" %}
     {% block content %}
+</head>
+<body>
 
 <h1>Rendering</h1>
     <img alt="puppy" src="{{url_for('static', filename='puppy-rendering.webp')}}" class="responsive">
