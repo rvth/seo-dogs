@@ -126,5 +126,9 @@ def tld_cctld():
 def cls_test():
     return render_template("cls-test.html")
 
+@app.route("/cls-test-2")
+def cls_test_2():
+    return render_template("cls-test-2.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
