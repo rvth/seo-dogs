@@ -130,9 +130,5 @@ def cls_test():
 def cls_test_2():
     return render_template("cls-test-2.html")
 
-@app.route("/blog")
-def blog():
-    return render_template("blog.html")
-
 if __name__ == "__main__":
     app.run(debug=True)
