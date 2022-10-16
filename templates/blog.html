@@ -2,13 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About</title>
+    <title>Blog Posts</title>
 </head>
 <body>
     {% extends "template.html" %}
     {% block content %}
 
-<h1>Blog coming soon</h1>
+    <h1>Blog Posts</h1>
+
+<div class="cards">
+    <div class="card">
+      <header>
+        <h2>Pandas: Creating, Modifying and Inspecting DataFrames</h2>
+      </header>
+
+        <img alt="pandas" src="{{url_for('static', filename='pandas_1.webp')}}" width="600" height="300" class="responsive">
+        <br>
+        <br>
+        <div class="button">
+          <a href="https://rvth.hashnode.dev/pandas-squid-game"> &#128062; Read More</a>
+        </div>
+    </div>
 
 <br>
 <br>
