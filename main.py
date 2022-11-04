@@ -122,5 +122,17 @@ def hreflang():
 def tld_cctld():
     return render_template("tld-and-cctld.html")
 
+@app.route("/cls-test")
+def cls_test():
+    return render_template("cls-test.html")
+
+@app.route("/cls-test-2")
+def cls_test_2():
+    return render_template("cls-test-2.html")
+
+@app.route("/blog")
+def blog():
+    return render_template("blog.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
