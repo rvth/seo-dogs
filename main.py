@@ -134,5 +134,29 @@ def cls_test_2():
 def blog():
     return render_template("blog.html")
 
+@app.route("/blog/technical-seo")
+def technicalseo():
+    return render_template("technicalseo.html")
+
+@app.route("/blog/python")
+def pythonblog():
+    return render_template("pythonblog.html")
+
+@app.route("/blog/personal-development")
+def personaldevelopment():
+    return render_template("personaldevelopment.html")
+
+@app.route("/blog/tech-ethics")
+def techethics():
+    return render_template("techethics.html")
+
+@app.route("/blog/machine-learning")
+def machinelearning():
+    return render_template("machinelearningblog.html")
+
+@app.route("/blog/dogs")
+def dogs():
+    return render_template("dogs.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
